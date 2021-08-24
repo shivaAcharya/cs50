@@ -1,14 +1,15 @@
 #include <stdio.h>
+#include <cs50.h>
 
 int main(void)
-{    
-    long cc_number = 30569309025904;
+{
+    long cc_number = get_long("Number: ");
     int digits[16];
 
-    //Get the length of cc number.
+    // Get length of cc number.
     int length_of_digits = 0;
     long num = cc_number;
-    while(num != 0)
+    while (num != 0)
     {
         num /= 10;
         length_of_digits++;
@@ -21,13 +22,14 @@ int main(void)
         cc_number /= 10;
     }
 
-    //Get first and second digit of cc number.
+    // Get the first and second digits of cc_number.
     int first_digit = digits[length_of_digits - 1];
     int second_digit = digits[length_of_digits - 2];
 
     // Calculate the sum of digits.
     int sum = 0;
-    for (int i = 1; i < length_of_digits; i += 2)  
+
+    for (int i = 1; i < 16; i += 2)
     {
         if (digits[i] < 5)
         {
@@ -39,13 +41,13 @@ int main(void)
         }
 
     }
-    for (int i = 0; i < length_of_digits; i += 2)
+    for (int i = 0; i < 16; i += 2)
     {
         sum += digits[i];
     }
 
-    // Check conditions for type and valid cc_number.    
-    if (sum % 10 == 0)
+    // Check conditions for type and valid cc_number.
+    if (sum % 10 == 0 && length_of_digits > 12)
     {
         if (first_digit == 3 && (second_digit == 4 || second_digit == 7))
         {
@@ -55,7 +57,8 @@ int main(void)
         {
             printf("VISA\n");
         }
-        else if (first_digit == 5 && (second_digit > 0 && second_digit < 6))
+        else if (first_digit == 5 && (second_digit == 1 || second_digit == 2 || second_digit == 3 || second_digit == 4
+                                      || second_digit == 5))
         {
             printf("MASTERCARD\n");
         }
@@ -63,12 +66,11 @@ int main(void)
         {
             printf("INVALID\n");
         }
-        
+
     }
     else
     {
         printf("INVALID\n");
     }
 
-    
 }
