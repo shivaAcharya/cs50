@@ -4,12 +4,6 @@
 int main(void)
 {
     float dollars = 0.41;
-    // // Prompt user to enter change owed.
-    // do
-    // {
-    //     dollars = get_float("Change owed: ");
-    // }
-    // while (dollars < 0);
 
     // Convert float to int for calculation
     int cents = round(dollars * 100);
