@@ -1,0 +1,394 @@
+<!DOCTYPE html><html lang="en-us"><head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta property="og:description" content="Harvard University's introduction to the intellectual enterprises of computer science and the art of programming.">
+
+        <meta property="og:image" content="https://img.youtube.com/vi/zYierUhIFNQ/maxresdefault.jpg"><meta property="og:title" content="Hello - CS50x 2021">
+
+        <link href="../../../favicon.ico?1631840265" rel="icon">
+
+        <!-- https://fonts.google.com/specimen/PT+Sans?query=PT+Sans&selection.family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700 -->
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+
+        <!-- http://getbootstrap.com/docs/4.6/getting-started/introduction/ -->
+        <script src="../../../assets/jquery/dist/jquery.min.js?1631840265"></script>
+        <script src="../../../assets/bootstrap/dist/js/bootstrap.bundle.min.js?1631840265"></script>
+
+        <!-- https://bootstrap-table.com/docs/getting-started/introduction/ -->
+        <link href="../../../assets/bootstrap-table/dist/bootstrap-table.min.css?1631840265" rel="stylesheet">
+        <script src="../../../assets/bootstrap-table/dist/bootstrap-table.min.js?1631840265"></script>
+        <script src="../../../assets/bootstrap-table/dist/extensions/mobile/bootstrap-table-mobile.min.js?1631840265"></script>
+
+        <!-- https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use -->
+        <link href="../../../assets/@fortawesome/fontawesome-free/css/all.min.css?1631840265" rel="stylesheet">
+
+        <!-- https://moment.github.io/luxon/ -->
+        <script src="../../../assets/luxon.min.js?1631840265"></script>
+
+        <!-- http://docs.mathjax.org/ -->
+        <!-- https://www.jsdelivr.com/package/npm/mathjax?path=es5 -->
+        <script crossorigin="anonymous" integrity="sha256-+nfSJ1LiSvANSK3wvi6FjM+oFwoIQvURU1frozp5z6o=" src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-chtml.js"></script>
+
+        <!-- https://github.com/verlok/vanilla-lazyload -->
+        <script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.7.0/intersection-observer.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.0/dist/lazyload.min.js"></script>
+
+        <!-- https://github.com/davidjbradshaw/iframe-resizer -->
+        <!-- https://www.jsdelivr.com/package/npm/iframe-resizer?path=js -->
+        <script crossorigin="anonymous" integrity="sha256-S8f0Q/V9VcfrqYgWo9EFS9zuDMdPTBMC+CBW0RjxQbs=" src="https://cdn.jsdelivr.net/npm/iframe-resizer@4.3.1/js/iframeResizer.min.js"></script>
+
+        <!-- https://github.com/scratchblocks/scratchblocks -->
+        <script src="../../../assets/scratchblocks-v3.5.2-min.js?1631840265"></script>
+
+        
+
+        <link href="../../../assets/page.css?1631840265" rel="stylesheet">
+        <script src="../../../assets/jekyll-theme-cs50.js?1631840265"></script>
+
+        <script>
+            window.CS50 = {
+                locale: "en",
+                tz: "America/New_York"
+            };
+        </script>
+
+        <title>Hello - CS50x 2021</title>
+
+
+    </head>
+
+    <body class="invisible">
+
+        <div class="alert fixed-top mb-0 rounded-0 shadow" data-alert="success dismissible" data-hash="14c26b7088b495629d13e2eb6186501b" id="alert" role="alert">
+            <button aria-label="Close" class="btn-close d-none" data-bs-dismiss="alert" type="button"></button><p>Interested in <a href="../../../#how-to-take-this-course">a verified certificate, a professional certificate, or transfer credit and accreditation</a>?
+And get vaccinated (as soon as it’s available to you). 💉 <a href="https://www.who.int/news-room/q-a-detail/coronavirus-disease-(covid-19)-vaccines">Here’s why</a>. <a href="https://www.google.com/search?q=covid-19+vaccine+finder">Here’s how</a>.</p></div>
+        
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <aside class="col-md">
+ 
+                    <header><h1 data-id="this-is-cs50x"><a href="../../..">This is CS50x</a></h1>
+
+<p>OpenCourseWare</p>
+
+<p><a class="pr-1 small" href="https://cs50.harvard.edu/donate">Donate<i aria-hidden="true" class="fas fa-external-link-alt ps-2"></i></a></p>
+
+<p><a href="https://cs.harvard.edu/malan/">David J. Malan</a>
+<br>
+<a href="mailto:malan@harvard.edu">malan@harvard.edu</a>
+<br>
+<a class="mr-1" href="https://www.facebook.com/dmalan"><i aria-hidden="true" class="fab fa-facebook-f" title="Facebook"></i><span class="sr-only">Facebook</span></a>
+<a class="mr-1" href="https://github.com/dmalan"><i aria-hidden="true" class="fab fa-github" title="GitHub"></i><span class="sr-only">GitHub</span></a>
+<a class="mr-1" href="https://www.instagram.com/davidjmalan/"><i aria-hidden="true" class="fab fa-instagram" title="Instagram"></i><span class="sr-only">Instagram</span></a>
+<a class="mr-1" href="https://www.linkedin.com/in/malan/"><i aria-hidden="true" class="fab fa-linkedin" title="LinkedIn"></i><span class="sr-only">LinkedIn</span></a>
+<a class="mr-1" href="https://orcid.org/0000-0001-5338-2522"><i aria-hidden="true" class="fab fa-orcid" title="ORCID"></i><span class="sr-only">ORCID</span></a>
+<a class="mr-1" href="https://www.quora.com/profile/David-J-Malan"><i aria-hidden="true" class="fab fa-quora" title="Quora"></i><span class="sr-only">Quora</span></a>
+<a class="mr-1" href="https://www.reddit.com/user/davidjmalan"><i aria-hidden="true" class="fab fa-reddit-alien" title="Reddit"></i><span class="sr-only">Reddit</span></a>
+<a class="mr-1" href="https://twitter.com/davidjmalan"><i aria-hidden="true" class="fab fa-twitter" title="Twitter"></i><span class="sr-only">Twitter</span></a></p></header>
+
+                    
+
+                    <button aria-controls="nav" aria-expanded="false" class="btn btn-sm collapsed d-md-none" data-bs-target="aside > nav" data-bs-toggle="collapse">
+                        Menu
+                    </button>
+
+                    <nav class="collapse d-md-block" id="nav"><hr>
+
+<ul>
+  <li data-marker="*"><a href="https://cs50.harvard.edu/x/puzzles/"><i class="fas fa-puzzle-piece pe-2"></i>CS50x Puzzle Day 2022</a></li>
+  <li data-marker="*"><a href="https://cs50.ly/zoom/"><i class="fas fa-video pe-2"></i>Zoom Meetings</a></li>
+</ul>
+
+<hr>
+
+<ul class="small">
+  <li data-marker="*"><a href="../../../workshop/">CS50 Educator Workshop 2021</a></li>
+  <li data-marker="*"><a href="../../../seminars/">CS50’s New Year’s Seminars<span aria-hidden="true" class="ps-2 text-decoration-none">🥂</span></a></li>
+  <li data-marker="*"><a href="../../../gallery/">Gallery of Final Projects<span aria-hidden="true" class="ps-2 text-decoration-none">🖼️ </span></a></li>
+  <li data-marker="*"><a href="../../../new/">What’s new for 2021?</a></li>
+</ul>
+
+<hr>
+
+<ul>
+  <li data-marker="*"><a href="../../../weeks/0/">Week 0</a> Scratch</li>
+  <li data-marker="*"><a href="../../../weeks/1/">Week 1</a> C</li>
+  <li data-marker="*"><a href="../../../weeks/2/">Week 2</a> Arrays</li>
+  <li data-marker="*"><a href="../../../weeks/3/">Week 3</a> Algorithms</li>
+  <li data-marker="*"><a href="../../../weeks/4/">Week 4</a> Memory</li>
+  <li data-marker="*"><a href="../../../weeks/5/">Week 5</a> Data Structures</li>
+  <li data-marker="*"><a href="../../../weeks/6/">Week 6</a> Python</li>
+  <li data-marker="*"><a href="../../../weeks/7/">Week 7</a> SQL</li>
+  <li data-marker="*"><a href="../../../weeks/8/">Week 8</a> HTML, CSS, JavaScript</li>
+  <li data-marker="*"><a href="../../../weeks/9/">Week 9</a> Flask</li>
+  <li data-marker="*"><a href="../../../weeks/10/">Week 10</a> Ethics</li>
+</ul>
+<ul>
+  <li data-marker="*" class="small"><a href="../../../weeks/security/">Security</a></li>
+  <li data-marker="*" class="small"><a href="../../../weeks/ai/">Artificial Intelligence</a></li>
+</ul>
+<ul>
+  <li data-marker="*"><a href="../../../project/">Final Project</a></li>
+</ul>
+
+<hr>
+
+<ul>
+  <li data-marker="*"><a href="../../../honesty/">Academic Honesty</a></li>
+  <li data-marker="*"><a href="../../../certificate/">CS50 Certificate</a></li>
+  <li data-marker="*"><a href="../../../faqs/">FAQs</a></li>
+  <li data-marker="*"><a href="https://cs50.me/cs50x">Gradebook</a></li>
+  <li data-marker="*"><a href="../../../staff/">Staff</a></li>
+  <li data-marker="*"><a href="../../../syllabus/">Syllabus</a></li>
+</ul>
+
+<hr>
+
+<ul>
+  <li data-marker="*"><a href="https://cs50.edx.org/ed">Ed Discussion</a> for Q&amp;A</li>
+  <li data-marker="*" class="small"><a href="https://us.edstem.org/quickstart/ed-discussion.pdf">Quick Start Guide</a></li>
+</ul>
+
+<hr>
+
+<ul class="small">
+  <li data-marker="*"><a href="https://cs50.edx.org/">edX</a></li>
+  <li data-marker="*"><a href="https://www.youtube.com/playlist?list=PLhQjrBD2T382_R182iC2gNZI9HzWFMC_8">YouTube</a></li>
+</ul>
+
+<hr>
+
+<ul class="small">
+  <li data-marker="*"><a href="https://ide.cs50.io/">CS50 IDE</a></li>
+  <li data-marker="*"><a href="https://www.w3schools.com/css/">CSS Tutorial</a></li>
+  <li data-marker="*"><a href="https://flask.palletsprojects.com/en/1.1.x/quickstart/">Flask Quickstart</a></li>
+  <li data-marker="*"><a href="https://www.w3schools.com/html/">HTML Tutorial</a></li>
+  <li data-marker="*"><a href="https://jinja.palletsprojects.com/en/2.11.x/templates/">Jinja Template Designer Documentation</a></li>
+  <li data-marker="*"><a href="https://man.cs50.io/">Manual Pages</a></li>
+  <li data-marker="*"><a href="https://docs.python.org/3.7/search.html">Python Documentation</a></li>
+  <li data-marker="*"><a href="https://scratch.mit.edu/">Scratch</a></li>
+  <li data-marker="*"><a href="https://www.w3schools.com/sql/">SQL Tutorial</a></li>
+  <li data-marker="*"><a href="https://cs50.readthedocs.io/style/c/">Style Guide</a></li>
+</ul>
+
+<hr>
+
+<ul class="small">
+  <li data-marker="*"><a href="https://cs50.noticeable.news/">Changelog</a></li>
+  <li data-marker="*"><a href="https://cs50.statuspage.io/">Status Page</a></li>
+</ul>
+
+<hr>
+
+<ul>
+  <li data-marker="*"><a href="../../../communities/"><strong>Communities</strong></a></li>
+  <li data-marker="*" class="small"><a href="https://www.clubhouse.com/club/cs50">Clubhouse</a></li>
+  <li data-marker="*" class="small"><a href="https://discord.gg/cs50">Discord</a> <span class="badge bg-light ms-1 py-1 rounded-pill text-dark">Q&amp;A</span></li>
+  <li data-marker="*" class="small"><a href="https://cs50.edx.org/ed">Ed</a> <span class="badge bg-light ms-1 py-1 rounded-pill text-dark">Q&amp;A</span></li>
+  <li data-marker="*" class="small"><a href="https://www.facebook.com/groups/cs50/">Facebook Group</a> <span class="badge bg-light ms-1 py-1 rounded-pill text-dark">Q&amp;A</span></li>
+  <li data-marker="*" class="small"><a href="https://www.facebook.com/cs50/">Facebook Page</a></li>
+  <li data-marker="*" class="small"><a href="https://github.com/cs50">GitHub</a></li>
+  <li data-marker="*" class="small"><a href="https://gitter.im/cs50/x">Gitter</a> <span class="badge bg-light ms-1 py-1 rounded-pill text-dark">Q&amp;A</span></li>
+  <li data-marker="*" class="small"><a href="https://instagram.com/cs50">Instagram</a></li>
+  <li data-marker="*" class="small"><a href="https://www.linkedin.com/groups/7437240/">LinkedIn Group</a></li>
+  <li data-marker="*" class="small"><a href="https://www.linkedin.com/school/CS50/">LinkedIn Page</a></li>
+  <li data-marker="*" class="small"><a href="https://cs50.medium.com/">Medium</a></li>
+  <li data-marker="*" class="small"><a href="https://www.quora.com/topic/CS50">Quora</a></li>
+  <li data-marker="*" class="small"><a href="https://www.reddit.com/r/cs50/">Reddit</a> <span class="badge bg-light ms-1 py-1 rounded-pill text-dark">Q&amp;A</span></li>
+  <li data-marker="*" class="small"><a href="https://cs50.edx.org/slack">Slack</a> <span class="badge bg-light ms-1 py-1 rounded-pill text-dark">Q&amp;A</span></li>
+  <li data-marker="*" class="small"><a href="https://www.snapchat.com/add/cs50">Snapchat</a></li>
+  <li data-marker="*" class="small"><a href="https://soundcloud.com/cs50">SoundCloud</a></li>
+  <li data-marker="*" class="small"><a href="https://cs50.stackexchange.com/">Stack Exchange</a> <span class="badge bg-light ms-1 py-1 rounded-pill text-dark">Q&amp;A</span></li>
+  <li data-marker="*" class="small"><a href="https://twitter.com/cs50">Twitter</a></li>
+  <li data-marker="*" class="small"><a href="http://www.youtube.com/subscription_center?add_user=cs50tv">YouTube</a></li>
+</ul>
+
+<hr>
+
+<p><a href="https://cs50.harvardshop.com/"><img src="https://i.imgur.com/GGMdcKt.png" alt="Harvard Shop"></a></p>
+
+<hr>
+
+<p><a href="../../../license/" class="small"><i class="fab fa-creative-commons me-1"></i>License</a></p></nav>
+
+                    <footer></footer>
+
+                </aside>
+
+                <main class="col-md">
+
+                    <h1 id="hello">Hello</h1>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>CS50 IDE is a web-based “integrated development environment” that allows you to program “in the cloud,” without installing any software locally. Indeed, CS50 IDE provides you with your very own “workspace” (i.e., storage space) in which you can save your own files and folders (aka directories).</p>
+
+<h3 id="logging-in">Logging In</h3>
+
+<p>Head to <a href="https://ide.cs50.io">ide.cs50.io</a> and click “Log in” to access your CS50 IDE. Once your IDE loads, you should see that (by default) it’s divided into three parts. Toward the top of CS50 IDE is your “text editor”, where you’ll write all of your programs. Toward the bottom of is a “terminal window” (light blue, by default), a command-line interface (CLI) that allows you to explore your workspace’s files and directories, compile code, run programs, and even install new software. And on the left is your “file browser”, which shows you all of the files and folders currently in your IDE.</p>
+
+<p>Start by clicking inside your terminal window. You should find that its “prompt” resembles the below.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~/ $
+</code></pre></div></div>
+
+<p>Click inside of that terminal window and then type</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/pset1/
+</code></pre></div></div>
+
+<p>followed by Enter in order to make a directory (i.e., folder) called <code class="language-plaintext highlighter-rouge">pset1</code> inside of your home directory. Take care not to overlook the space between <code class="language-plaintext highlighter-rouge">mkdir</code> and <code class="language-plaintext highlighter-rouge">~/pset1</code> or any other character for that matter! Keep in mind that <code class="language-plaintext highlighter-rouge">~</code> always denotes your home directory and <code class="language-plaintext highlighter-rouge">~/pset1</code> denotes a directory called <code class="language-plaintext highlighter-rouge">pset1</code>, which is inside of <code class="language-plaintext highlighter-rouge">~</code>.</p>
+
+<p>Here on out, to execute (i.e., run) a command means to type it into a terminal window and then hit Enter. Commands are “case-sensitive,” so be sure not to type in uppercase when you mean lowercase or vice versa.</p>
+
+<p>Now execute</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/pset1/
+</code></pre></div></div>
+
+<p>to move yourself into (i.e., open) that directory. Your prompt should now resemble the below.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~/pset1/ $
+</code></pre></div></div>
+
+<p>If not, retrace your steps and see if you can determine where you went wrong.</p>
+
+<p>Now execute</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/pset1/hello
+</code></pre></div></div>
+
+<p>to create a new directory called <code class="language-plaintext highlighter-rouge">hello</code> inside of your <code class="language-plaintext highlighter-rouge">pset1</code> directory. Then execute</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/pset1/hello
+</code></pre></div></div>
+
+<p>to move yourself into that directory.</p>
+
+<p>Shall we have you write your first program? From the <em>File</em> menu, click <em>New File</em>, and save it (as via the <em>Save</em> option in the <em>File</em> menu) as <code class="language-plaintext highlighter-rouge">hello.c</code> inside of your <code class="language-plaintext highlighter-rouge">~/pset1/hello</code> directory. Proceed to write your first program by typing precisely these lines into the file:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    printf("hello, world\n");
+}
+</code></pre></div></div>
+
+<p>Notice how CS50 IDE adds “syntax highlighting” (i.e., color) as you type, though CS50 IDE’s choice of colors might differ from this problem set’s. Those colors aren’t actually saved inside of the file itself; they’re just added by CS50 IDE to make certain syntax stand out. Had you not saved the file as <code class="language-plaintext highlighter-rouge">hello.c</code> from the start, CS50 IDE wouldn’t know (per the filename’s extension) that you’re writing C code, in which case those colors would be absent.</p>
+
+<h2 id="listing-files">Listing Files</h2>
+
+<p>Next, in your terminal window, immediately to the right of the prompt (<code class="language-plaintext highlighter-rouge">~/pset1/hello/ $</code>), execute</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ls
+</code></pre></div></div>
+
+<p>You should see just <code class="language-plaintext highlighter-rouge">hello.c</code>? That’s because you’ve just listed the files in your <code class="language-plaintext highlighter-rouge">hello</code> folder. In particular, you <em>executed</em> (i.e., ran) a command called <code class="language-plaintext highlighter-rouge">ls</code>, which is shorthand for “list.” (It’s such a frequently used command that its authors called it just <code class="language-plaintext highlighter-rouge">ls</code> to save keystrokes.) Make sense?</p>
+
+<h2 id="compiling-programs">Compiling Programs</h2>
+
+<p>Now, before we can execute the <code class="language-plaintext highlighter-rouge">hello.c</code> program, recall that we must <em>compile</em> it with a <em>compiler</em>, translating it from <em>source code</em> into <em>machine code</em> (i.e., zeroes and ones). Execute the command below to do just that:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make hello
+</code></pre></div></div>
+
+<p>And then execute this one again:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ls
+</code></pre></div></div>
+
+<p>This time, you should see not only <code class="language-plaintext highlighter-rouge">hello.c</code> but <code class="language-plaintext highlighter-rouge">hello</code> listed as well? You’ve now translated the source code in <code class="language-plaintext highlighter-rouge">hello.c</code> into machine code in <code class="language-plaintext highlighter-rouge">hello</code>.</p>
+
+<p>Now execute the program itself by executing the below.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./hello
+</code></pre></div></div>
+
+<p>Hello, world, indeed!</p>
+
+<h2 id="getting-user-input">Getting User Input</h2>
+
+<p>Suffice it to say, no matter how you compile or execute this program, it only ever prints <code class="language-plaintext highlighter-rouge">hello, world</code>. Let’s personalize it a bit, just as we did in class.</p>
+
+<p>Modify this program in such a way that it first prompts the user for their name and then prints <code class="language-plaintext highlighter-rouge">hello, so-and-so</code>, where <code class="language-plaintext highlighter-rouge">so-and-so</code> is their actual name.</p>
+
+<p>As before, be sure to compile your program with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make hello
+</code></pre></div></div>
+
+<p>And be sure to execute your program, testing it a few times with different inputs, with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./hello
+</code></pre></div></div>
+
+<h3 id="walkthrough">Walkthrough</h3>
+
+<div class="embed-responsive embed-responsive-16by9" data-video=""><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border embed-responsive-item" data-video="" src="https://www.youtube.com/embed/wSk1KSDUEYA?modestbranding=0&amp;rel=0&amp;showinfo=0"></iframe></div>
+
+<h3 id="hints">Hints</h3>
+
+<h4 id="dont-recall-how-to-prompt-the-user-for-their-name">Don’t recall how to prompt the user for their name?</h4>
+
+<p>Recall that you can use <code class="language-plaintext highlighter-rouge">get_string</code> as follows, storing its <em>return value</em> in a variable called <code class="language-plaintext highlighter-rouge">name</code> of type <code class="language-plaintext highlighter-rouge">string</code>.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">string</span> <span class="n">name</span> <span class="o">=</span> <span class="n">get_string</span><span class="p">(</span><span class="s">"What is your name?</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h4 id="dont-recall-how-to-format-a-string">Don’t recall how to format a string?</h4>
+
+<p>Don’t recall how to join (i.e., concatenate) the user’s name with a greeting? Recall that you can use <code class="language-plaintext highlighter-rouge">printf</code> not only to print but to format a string (hence, the <code class="language-plaintext highlighter-rouge">f</code> in <code class="language-plaintext highlighter-rouge">printf</code>), a la the below, wherein <code class="language-plaintext highlighter-rouge">name</code> is a <code class="language-plaintext highlighter-rouge">string</code>.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">printf</span><span class="p">(</span><span class="s">"hello, %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h4 id="use-of-undeclared-identifier">Use of undeclared identifier?</h4>
+
+<p>Seeing the below, perhaps atop other errors?</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>error: use of undeclared identifier 'string'; did you mean 'stdin'?
+</code></pre></div></div>
+
+<p>Recall that, to use <code class="language-plaintext highlighter-rouge">get_string</code>, you need to include <code class="language-plaintext highlighter-rouge">cs50.h</code> (in which <code class="language-plaintext highlighter-rouge">get_string</code> is <em>declared</em>) atop a file, as with:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;cs50.h&gt;
+</span></code></pre></div></div>
+
+<h3 id="how-to-test-your-code">How to Test Your Code</h3>
+
+<p>Execute the below to evaluate the correctness of your code using <code class="language-plaintext highlighter-rouge">check50</code>. But be sure to compile and test it yourself as well!</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>check50 cs50/problems/2021/x/hello
+</code></pre></div></div>
+
+<p>Execute the below to evaluate the style of your code using <code class="language-plaintext highlighter-rouge">style50</code>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>style50 hello.c
+</code></pre></div></div>
+
+<h2 id="how-to-submit">How to Submit</h2>
+
+<p>Execute the below to submit your work.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>submit50 cs50/problems/2021/x/hello
+</code></pre></div></div>
+
+
+                </main>
+
+            </div>
+
+        </div>
+
+        
+ 
+        <script src="../../../assets/page.js?1631840265"></script>
+
+    
+
+
+</body></html>
