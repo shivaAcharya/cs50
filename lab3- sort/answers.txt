@@ -1,1 +1,11 @@
+sort1 uses: bubble sort
 
+How do you know?: This algorithm has the highest big O order and the lowest omega order.
+
+sort2 uses: merge sort
+
+How do you know?: This algorithm has the higheest big O and the lowest omega order among all.
+
+sort3 uses: selection sort
+
+How do you know?: This algorithm has the highest big 0 and omega order.
