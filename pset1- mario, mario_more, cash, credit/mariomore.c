@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    int a = 2;
+    int a = 4;
     // printf("Please input an interger value: ");
     // scanf("%i", &a);
     char space [] = " ";
@@ -19,6 +19,11 @@ int main(void)
         for (int i = a; i >= k; i--)
         {
             printf("%s", hash);
+        }
+        printf("%s", space);
+                for (int i = a; i >= k; i--)
+        {
+            printf("%s", hash);  
         }
         k--;
         if (k > 0)
