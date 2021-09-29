@@ -33,7 +33,7 @@ void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
 void print_winner(void);
-bool cycle (int candidate);
+bool cycle(int winner, int loser);
 
 int main(int argc, string argv[])
 {
@@ -134,7 +134,7 @@ void record_preferences(int ranks[])
 void add_pairs(void)
 {
     // TODO
-
+    //pair_count = 0;
     for (int i = 0; i < candidate_count; i++)
     {
         for (int j = 0; j < candidate_count; j++)
@@ -159,11 +159,11 @@ void sort_pairs(void)
 
     for (int i = 0; i < pair_count; i++)
     {
-        pair small [MAX * (MAX -1) / 2];
+        pair small [MAX * (MAX - 1) / 2];
         for (int j = i + 1; j < pair_count; j++)
         {
             int a = pairs[j].winner, b = pairs[j].loser, c = pairs[i].winner, d = pairs[i].loser;
-            if (preferences[a][b] > preferences[c][d])
+            if ((preferences[a][b] - preferences[b][a]) > (preferences[c][d] - preferences[d][c]))
             {
                 small[i] = pairs[j];
                 pairs[j] = pairs[i];
@@ -184,24 +184,26 @@ void lock_pairs(void)
         int a = pairs[i].winner;
         int b = pairs[i].loser;
 
-        if (!cycle(i))
+        // Check if pair creates cycle
+        if (!cycle(a, b))
         {
             locked[a][b] = true;
         }
     }
-    //return;
 }
 
-bool cycle (int candidate)
+bool cycle(int winner, int loser)
 {
-    for (int i = candidate; i < pair_count - 1; i++)
+    // Base case
+    if (winner == loser)
     {
-        for (int j = 0; j < pair_count; j++)
+        return true;
+    }
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (locked[loser][i] && cycle(winner, i))
         {
-            if (locked[j][i])
-            {
-                return true;
-            }
+            return true;
         }
     }
     return false;
@@ -213,27 +215,25 @@ void print_winner(void)
     // TODO
 
     int winning_candidate = 0;
-    bool win = true;
     for (int i = 0; i < pair_count; i++)
     {
+        int count = 0;
         for (int j = 0; j < pair_count; j++)
         {
-            if (locked[j][i])
+            if (!locked[j][i])
             {
-                win = false;
-                winning_candidate = pairs[i].winner;
+                count++;
+            }
+            else
+            {
                 break;
             }
         }
-        if (!win)
+        if (count == pair_count)
         {
+            winning_candidate = i;
             break;
         }
     }
-    if (!win)
-    {
-        printf("%s\n", candidates[winning_candidate]);
-    }
-    //return;
+    printf("%s\n", candidates[winning_candidate]);
 }
-
