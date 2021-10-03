@@ -1,0 +1,69 @@
+﻿Utility Theory, Hypothesis Testing, and Empirical Investigation
+
+
+Shiva Acharya
+Westcliff University
+MSCS 600: Software Quality Metrics
+Professor Thomas Santa Maria
+September 26, 2021
+________________
+
+
+Utility Theory, Hypothesis Testing, and Empirical Investigation
+        In addition to classical, and simple data analysis methodologies, a few advanced techniques such as Multi-Criteria Decision Making (MCDM), Analytic Hierarchy Process (AHP), and Multiattribute Utility Theory (MUAT) can be adopted in a decision-making process. Moreover, a goal-oriented approach in the investigation along with the testings of hypotheses can provide problem-specific guidance on suitable techniques based on the constraints of the problem. Finally, applying general techniques and following appropriate process models with the collection of good data for your empirical studies can help you draw useful conclusions from your investigation. This paper highlights the use of utility theories, hypothesis testings, and empirical investigations in decision-makings and answering software engineering-related questions.
+
+
+Utility Theory in Decision Making
+        The decision-making process generally involves several criteria with dependent and independent variables related to the subjects of interest. Usually, the decision-maker has to select few options over several other alternatives. One of the ways in providing decision aid in multi-criteria problems is to adopt multiattribute utility theory (MUAT) where it provides an approach for appropriate selection of suitable options over several alternatives (Fenton and Bieman, 2014). MUAT approach uses a utility function that quantitatively represents the criteria providing a proper assessment of constraints over cost in decision-making. Moreover, MUAT can be very helpful in ranking the available alternatives from the best to the worst which in turn can be useful in observing the “good” solution to your problem rather than the ‘best’ one restraining to the problem. For example, when selecting an appropriate integrated development environment (IDE) for a software development team, the best IDE might not be preferable to all team members. In this situation, several criteria like ease of collaboration, availability of usage guides, speed, and debugging tool can be identified for all available IDEs and with a proper utility function, each IDE can be ranked quantitatively. And finally, with the constraints of preference of team member, the ‘good’ IDE that is widely accepted by most of the team members can be selected rather than the ‘best’ one. Multi-Criteria Decision Making (MCDM) and Analytic Hierarchy Process (AHP) are two other advanced techniques that are widely used in decision-making.
+When the attributes and function values of all the alternatives are well known, a decision-maker can use Multi-Criteria Decision Making (MCDM) approach to select the appropriate options (Dyer et al., 1992). Sometimes, MAUT is categorized within the MCDM approach, however, they are separated when the assessment of alternatives is based on risk or uncertainties. Moreover, another advanced technique used in decision-making is the Analytic Hierarchy Process (AHP) which is categorized under the MAUT technique where preference or importance ratios of alternatives are assessed using hierarchical ordering. However, rank reversal and lack of transitivity in AHP are two main drawbacks where it has been criticized though being a popular decision-making technique (Gass, 2005). Rank reversal is the shifting of the ordering of selections when alternatives are added or deleted. When multiple criteria are considered, transitivity provides a mathematical model in comparing alternatives whose lacking in AHP is inconvenient. The selection of decision-making techniques should be based on the goal of your investigation and creating hypotheses, testing them to support or refute the hypotheses are imperative in the rigorous investigation.
+
+
+Hypothesis Testing
+Hypotheses are created as the first step in the goal-oriented empirical investigation and are later evaluated to support or refute based on the results obtained from the investigation. Hypotheses can be tested using the traditional approach where “test of significance” is a key factor or using the classical approach where “confidence level” is mostly considered (Fenton and Bieman, 2014). In the traditional approach, a null hypothesis along with one or more alternative hypotheses are created, and a “test of significance” evaluates if the relation in the hypothesis is by chance and the null hypothesis holds unless strong evidence against it is shown in the investigation. On the other hand, in the classical approach, a confidence level usually 0.05 is predetermined and the null hypothesis is rejected if the evidence from the investigation shows that there is only or less than a 5% chance that the null hypothesis is true. For example, if the goal of an investigation is to determine whether the agile development model is more suitable for software development than waterfall, a null hypothesis (H0) stating “there is no significant difference between waterfall and agile model” can be developed. With the investigation measuring various attributes, the null hypothesis can only be refuted if there is more than a 95% chance that agile methodology is more suitable than the waterfall.
+The 5% significance basis in the traditional approach seldom provides statistical differences when comparing two actions or products, so Kan (2002) recommends altering the significance basis to 10%, 15%, or even 20% in application-specific situations. Moreover, he suggests using empirical experience to provide guidance in setting the control limits, creating a significance basis, and establishing confidence intervals as needed. This modified usage of the traditional approach not only provides the benefits of using empirical studies in drawing conclusions but also improves the decision-making with adaptive limits set using the empirical investigation of similar subjects from the past. Also, the traditional approach is based on the notion of either supporting or rejecting set hypotheses by comparing only the differences between the alternatives rather than considering other attributes. 
+Since the traditional approach of hypothesis testing in empirical research only focuses on the difference between a base product and alternate products, it lacks in providing an in-depth analysis of the relationship between alternatives. Dolado et al. (2013) introduce the concept of equivalence hypothesis testing (EHT) in empirical software engineering in their article. EHT considers differences in sizes and similarities between alternative products. In the previous example of investigating a more suitable development model, the use of EHT can also provide by what percentage one model is better than the other and what level of similarities are present between these two models.
+Empirical Investigation
+        An empirical investigation is based on the principle of drawing out conclusions and making decisions solely based on observation and experience rather than logic and theory (Fenton and Bieman, 2014). Several application-specific design techniques and process models can be adopted for an empirical investigation. As this is a goal-oriented approach, identifying the clear goal with an explicitly defined question is the preliminary step in this process. This step is followed by developing hypotheses, and studying variables. The variables need to be maintained in the control environment. Also, all the threats to validity present in the investigation should be identified and considered during the analysis stage. Finally, if there is the use of human subjects in the investigation, all applicable regulations should be followed.
+ 
+        In an empirical study performed by Rivero and Conte (2013) to evaluate a new inspection technique in web applications, they follow similar general techniques for conducting an empirical study. The study is divided into two sections - description and analysis. During the description section, at first explicit goal is defined, and then subjects of the study are identified. After the identification of subjects, the materials used and the procedures followed are explained. At the end of this section, data collection methods are described. During the analysis section of the study, quantitative analysis, qualitative analysis, and threats to validity are explained. Quantitative analysis is shown using box plots. This is an example of a general technique of designing an empirical study and the design techniques should be adapted based on the application where the study is conducted for.
+        
+Good Data Collection
+        The design of a rigorous experiment should not only specify what data to collect but also clarify what tools, methodologies, and time periods to be used for data collection (Fenton and Bieman, 2014). Since the study is only as good as the usefulness of the data it collects, proper data collection techniques should be adopted for the application-specific study. These techniques should make appropriate use of measurement scale types. For example, if you are collecting data on customer satisfaction for your study, ordinal or interval scale type is more preferable to nominal or absolute. Also, the forms used in data collection should be well formatted and should use orthogonal variables to avoid ambiguity during data collection. According to Laman (2007), “collecting high quality data is essential to the success of any project, process improvement or new product development”. Poor quality or useless data can’t produce good analysis and finally, the good decision-making process can be hindered.
+Conclusion
+        The empirical study makes use of observation and experience in comparing the hypotheses. Defining explicit goals, identifying variables, maintaining control of the variables, and analysis of the collected data are general design techniques used in the empirical study. The collection of good data is an imperative process for the study to draw correct conclusions and make good decisions. The traditional and classical approached in hypothesis testing can be adapted with equivalence hypothesis testing to refine the results for application-specific studies. Moreover, the use of more advanced techniques like utility theory can assist in selecting a more suitable solution to your problems.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+References
+Dolado, J. J., Otero, M. C., & Harman, M. (2013). Equivalence hypothesis testing in experimental software engineering. Software Quality Journal, 22(2), 215-238. http://dx.doi.org/10.1007/s11219-013-9196-0
+Dyer, J. S., Fishburn, P. C., Steuer, R. E., Wallenius, J., & Zionts, S. (1992). Multiple criteria decision making, multiattribute utility theory: The next ten years. Management Science, 38(5), 645.
+Fenton, N., & Bieman, J. (2014). Software metrics: A rigorous and practical approach (3rd ed.). CRC Press. https://doi.org/10.1201/b17461 
+Gass, S. I. (2005). Model world: The great debate-MAUT versus AHP. Interfaces, 35(4), 308-312.
+Kan, S. H. (2002). Metrics and models in software quality engineering (2nd ed.). Addison-Wesley. 
+Laman, S. A. (2007, 01). Data collection guidelines: The people element. Quality Progress, 40, 88
+Rivero, L., & Conte, T. (2013). Using an empirical study to evaluate the feasibility of a new usability inspection technique for paper based prototypes of web applications. Journal of Software Engineering Research and Development, 1(1), 1-25. http://dx.doi.org/10.1186/2195-1721-1-2
