@@ -1,7 +1,7 @@
 # Simulate a sports tournament
 
-
-
+import csv
+import sys
 import random
 
 # Number of simluations to run
@@ -11,12 +11,17 @@ N = 1000
 def main():
 
     # Ensure correct usage
-    #if len(sys.argv) != 2:
-        #sys.exit("Usage: python tournament.py FILENAME")
+    if len(sys.argv) != 2:
+        sys.exit("Usage: python tournament.py FILENAME")
 
-    teams = [{'team': 'Uruguay', 'rating': 976}, {'team': 'Portugal', 'rating': 1306}, {'team': 'France', 'rating': 1166}, {'team': 'Argentina', 'rating': 1254}, {'team': 'Brazil', 'rating': 1384}, {'team': 'Mexico', 'rating': 1008}, {'team': 'Belgium', 'rating': 1346}, {'team': 'Japan', 'rating': 528}, {'team': 'Spain', 'rating': 1162}, {'team': 'Russia', 'rating': 493}, {'team': 'Croatia', 'rating': 975}, {'team': 'Denmark', 'rating': 1054}, {'team': 'Sweden', 'rating': 889}, {'team': 'Switzerland', 'rating': 1179}, {'team': 'Colombia', 'rating': 989}, {'team': 'England', 'rating': 1040}]
+    teams = []
 
     # TODO: Read teams into memory from file
+    with open(sys.argv[1], "r") as file:
+        reader = csv.DictReader(file)
+        for team in reader:
+            team["rating"] = int(team["rating"])
+            teams.append(team)
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
@@ -25,8 +30,7 @@ def main():
         if winner in counts:
             counts[winner] += 1
         else:
-            counts[winner] = 0
-
+            counts[winner] = 1
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
@@ -61,9 +65,9 @@ def simulate_tournament(teams):
     winningTeams = simulate_round(teams)
 
     if len(winningTeams) == 1:
-        return winningTeams[0]
+        return winningTeams[0]["team"]
     else:
-        simulate_tournament(winningTeams)
+        return simulate_tournament(winningTeams)
 
 
 if __name__ == "__main__":
